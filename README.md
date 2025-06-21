@@ -1,5 +1,7 @@
 # React_Query_Example1
 
+<img src="./assets/img.png"/>
+
 ## TechStack
 
 <div style="diplay:none">
@@ -24,4 +26,3 @@ tener un mejor manejo de las peticiones HTTP
   npm install
   npm run start
 ```
-
