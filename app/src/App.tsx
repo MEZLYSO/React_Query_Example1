@@ -33,7 +33,7 @@ function App() {
 
   //Evalucion de estados del Hook
 
-  // Este es un comentario prueba XD
+  // Este es un comentario prueba XD 
 
   // Retorna un elemento mientras se tiene respuesta de la API
   if (status === 'pending') {
