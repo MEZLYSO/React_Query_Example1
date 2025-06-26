@@ -27,7 +27,8 @@ function App() {
     //Definicion del nombre con el que se guradaran en cache
     queryKey: ['products'],
     //Definicion de la funcion que se encargara de la consulta de la API
-    queryFn: getProducts
+    queryFn: getProducts,
+    refetchInterval: 5000 // <-- Intervalo de actuliazcion
   })
 
   //Evalucion de estados del Hook
@@ -44,6 +45,7 @@ function App() {
       </div>
     </>)
   }
+
 
   // Retorna un elemento ya sea cuando la API no funciona o no tarda demasiado en responder
   if (status === 'error') {
@@ -64,7 +66,7 @@ function App() {
       <div className="w-full h-auto bg-blue-500 py-2 fixed top-0 z-99">
         <h1 className="text-center font-bold text-2xl text-white">Lista de productos</h1>
       </div>
-      <div className="grid grid-cols-3 gap-5 mt-20 mx-5 my-5">
+      <div className="grid grid-cols-3 gap-5 mt-20 mx-5 my-5 bg-white">
         {/* Recorrido de los datos obtenidos de la API */}
         {data?.products?.map((ele: Product) => (
           <div
